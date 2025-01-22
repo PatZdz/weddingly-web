@@ -1,14 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
-import en from '../../messages/en.json';
-import pl from '../../messages/pl.json';
-
 export default function OurServices() {
-  const pathname = usePathname();
-  const isEN = pathname.startsWith('/en');
-  const t = isEN ? en : pl;
-
   return (
     <section
       id="services" 
@@ -19,8 +11,8 @@ export default function OurServices() {
         borderRadius: 'var(--border-radius-md)',
       }}
     >
-      <h2 style={{ color: 'var(--color-primary)' }}>{t.ourServices.title}</h2>
-      <h3 style={{ marginBottom: '2rem' }}>{t.ourServices.subtitle}</h3>
+      <h2 style={{ color: 'var(--color-primary)' }}>Our Services</h2>
+      <h3 style={{ marginBottom: '2rem' }}>What we can do for you</h3>
 
       {/* Branding */}
       <div
@@ -31,9 +23,9 @@ export default function OurServices() {
           marginBottom: '1rem',
         }}
       >
-        <h4>{t.ourServices.brandingTitle}</h4>
-        <p style={{ fontStyle: 'italic' }}>{t.ourServices.brandingKeywords}</p>
-        <p>{t.ourServices.brandingDesc}</p>
+        <h4>Branding</h4>
+        <p style={{ fontStyle: 'italic' }}>Logo Design, Brand Identity, Visual Guidelines</p>
+        <p>We create memorable brand identities that resonate with your target audience and stand out in the market.</p>
       </div>
 
       {/* UX/UI */}
@@ -45,9 +37,9 @@ export default function OurServices() {
           marginBottom: '1rem',
         }}
       >
-        <h4>{t.ourServices.uxuiTitle}</h4>
-        <p style={{ fontStyle: 'italic' }}>{t.ourServices.uxuiKeywords}</p>
-        <p>{t.ourServices.uxuiDesc}</p>
+        <h4>UX/UI Design</h4>
+        <p style={{ fontStyle: 'italic' }}>User Experience, Interface Design, Prototyping</p>
+        <p>We design intuitive and engaging user experiences that make your digital products a joy to use.</p>
       </div>
 
       {/* WebDev */}
@@ -59,9 +51,9 @@ export default function OurServices() {
           marginBottom: '1rem',
         }}
       >
-        <h4>{t.ourServices.webDevTitle}</h4>
-        <p style={{ fontStyle: 'italic' }}>{t.ourServices.webDevKeywords}</p>
-        <p>{t.ourServices.webDevDesc}</p>
+        <h4>Web Development</h4>
+        <p style={{ fontStyle: 'italic' }}>Custom Websites, Web Applications, CMS Integration</p>
+        <p>We build modern, responsive websites that perform great and look even better.</p>
       </div>
 
       {/* MobileApp */}
@@ -73,9 +65,9 @@ export default function OurServices() {
           marginBottom: '1rem',
         }}
       >
-        <h4>{t.ourServices.mobileAppTitle}</h4>
-        <p style={{ fontStyle: 'italic' }}>{t.ourServices.mobileAppKeywords}</p>
-        <p>{t.ourServices.mobileAppDesc}</p>
+        <h4>Mobile App Development</h4>
+        <p style={{ fontStyle: 'italic' }}>iOS, Android, Cross-platform Solutions</p>
+        <p>We develop mobile applications that provide value and enhance user engagement.</p>
       </div>
 
       {/* eCommerce */}
@@ -86,9 +78,9 @@ export default function OurServices() {
           padding: '1rem',
         }}
       >
-        <h4>{t.ourServices.ecommerceTitle}</h4>
-        <p style={{ fontStyle: 'italic' }}>{t.ourServices.ecommerceKeywords}</p>
-        <p>{t.ourServices.ecommerceDesc}</p>
+        <h4>eCommerce Solutions</h4>
+        <p style={{ fontStyle: 'italic' }}>Online Stores, Payment Integration, Shopping Cart</p>
+        <p>We create seamless shopping experiences that drive conversions and sales.</p>
       </div>
     </section>
   );

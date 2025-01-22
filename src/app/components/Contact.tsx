@@ -1,14 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
-import en from '../../messages/en.json';
-import pl from '../../messages/pl.json';
-
 export default function Contact() {
-  const pathname = usePathname();
-  const isEN = pathname.startsWith('/en');
-  const t = isEN ? en : pl;
-
   return (
     <section
       id="contact"
@@ -20,14 +12,14 @@ export default function Contact() {
       }}
     >
       <h2 style={{ color: 'var(--color-primary)', marginBottom: '1rem' }}>
-        {t.contactUs.title}
+        Contact Us
       </h2>
-      <h3 style={{ marginBottom: '1rem' }}>{t.contactUs.subtitle}</h3>
-      <p style={{ marginBottom: '1rem' }}>{t.contactUs.formDescription}</p>
+      <h3 style={{ marginBottom: '1rem' }}>Get in Touch</h3>
+      <p style={{ marginBottom: '1rem' }}>Feel free to reach out to us</p>
 
-      <p>{t.contactUs.email}</p>
-      <p>{t.contactUs.phone}</p>
-      <p>{t.contactUs.address}</p>
+      <p>Email: contact@example.com</p>
+      <p>Phone: +1 234 567 890</p>
+      <p>Address: 123 Wedding Street</p>
 
       <button
         style={{
@@ -40,7 +32,7 @@ export default function Contact() {
           cursor: 'pointer',
         }}
       >
-        {t.contactUs.cta}
+        Contact Now
       </button>
     </section>
   );

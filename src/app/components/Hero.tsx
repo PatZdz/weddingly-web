@@ -1,14 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
-import en from '../../messages/en.json';
-import pl from '../../messages/pl.json';
-
 export default function Hero() {
-  const pathname = usePathname();
-  const isEN = pathname.startsWith('/en');
-  const t = isEN ? en : pl;
-
   return (
     <section
       id="hero"
@@ -19,9 +11,9 @@ export default function Hero() {
         marginTop: '2rem',
       }}
     >
-      <h1 style={{ color: 'var(--color-primary)' }}>{t.hero.title}</h1>
-      <h2>{t.hero.subtitle}</h2>
-      <p>{t.hero.introParagraph}</p>
+      <h1 style={{ color: 'var(--color-primary)' }}>Welcome to Our Wedding</h1>
+      <h2>Marzena & Bożydar</h2>
+      <p>We're getting married! Join us on our special day.</p>
       <button
         style={{
           marginTop: '1rem',
@@ -33,7 +25,7 @@ export default function Hero() {
           cursor: 'pointer',
         }}
       >
-        {t.hero.cta}
+        RSVP Now
       </button>
     </section>
   );

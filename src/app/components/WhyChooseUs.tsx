@@ -1,14 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
-import en from '../../messages/en.json';
-import pl from '../../messages/pl.json';
-
 export default function WhyChooseUs() {
-  const pathname = usePathname();
-  const isEN = pathname.startsWith('/en');
-  const t = isEN ? en : pl;
-
   return (
     <section
       id="whychooseu" 
@@ -20,28 +12,28 @@ export default function WhyChooseUs() {
       }}
     >
       <h2 style={{ color: 'var(--color-primary)', marginBottom: '1rem' }}>
-        {t.whyChooseUx.title}
+        Why Choose Us
       </h2>
-      <h3 style={{ marginBottom: '2rem' }}>{t.whyChooseUx.subtitle}</h3>
+      <h3 style={{ marginBottom: '2rem' }}>Your Perfect Wedding Partner</h3>
 
       <div style={{ marginBottom: '1rem' }}>
-        <h4>{t.whyChooseUx.fullServiceTitle}</h4>
-        <p>{t.whyChooseUx.fullServiceDesc}</p>
+        <h4>Full Service</h4>
+        <p>We offer comprehensive wedding planning services from start to finish</p>
       </div>
 
       <div style={{ marginBottom: '1rem' }}>
-        <h4>{t.whyChooseUx.dataDrivenTitle}</h4>
-        <p>{t.whyChooseUx.dataDrivenDesc}</p>
+        <h4>Data-Driven Approach</h4>
+        <p>We use analytics and trends to make informed decisions for your wedding</p>
       </div>
 
       <div style={{ marginBottom: '1rem' }}>
-        <h4>{t.whyChooseUx.cuttingEdgeTitle}</h4>
-        <p>{t.whyChooseUx.cuttingEdgeDesc}</p>
+        <h4>Cutting-Edge Solutions</h4>
+        <p>Latest technology and innovative solutions for modern weddings</p>
       </div>
 
       <div style={{ marginBottom: '1rem' }}>
-        <h4>{t.whyChooseUx.microSaasTitle}</h4>
-        <p>{t.whyChooseUx.microSaasDesc}</p>
+        <h4>Micro SaaS Integration</h4>
+        <p>Smart tools and software to streamline your wedding planning process</p>
       </div>
 
       <button
@@ -55,7 +47,7 @@ export default function WhyChooseUs() {
           cursor: 'pointer',
         }}
       >
-        {t.whyChooseUx.cta}
+        Contact Us Now
       </button>
     </section>
   );

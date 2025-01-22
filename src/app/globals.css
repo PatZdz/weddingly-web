@@ -1,0 +1,28 @@
+/* globals.css */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: sans-serif;
+  background-color: #EBEBE1; /* kolor tła strony */
+  color: #000;
+  scroll-behavior: smooth; /* by anchor linki przewijały się płynnie */
+}
+
+:root {
+  --color-primary: #3257A5; /* master kolor */
+  --border-radius-sm: 8px;
+  --border-radius-md: 10px;
+}
+
+/* Kontener do wyrównywania zawartości */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}

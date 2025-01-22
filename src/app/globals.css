@@ -1,28 +1,56 @@
-/* globals.css */
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  font-family: sans-serif;
-  background-color: #EBEBE1; /* kolor tła strony */
-  color: #000;
-  scroll-behavior: smooth; /* by anchor linki przewijały się płynnie */
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --color-primary: #3257A5; /* master kolor */
-  --border-radius-sm: 8px;
-  --border-radius-md: 10px;
+  --primary-color: #003E3C;
+  --primary-hover: #002E2C;
+  --background-color: #F9F4ED;
 }
 
-/* Kontener do wyrównywania zawartości */
+@layer components {
+  .btn-cta {
+    @apply bg-[#003E3C] hover:bg-[#002E2C] text-white font-medium px-4 py-2 rounded-lg transition-colors duration-200;
+  }
+}
+
+@layer base {
+  .bg-primary {
+    background-color: var(--primary-color);
+  }
+  
+  .hover\:bg-primary\/90:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .text-primary {
+    color: var(--primary-color);
+  }
+}
+
+html, 
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  background-color: var(--background-color);
+  color: #293238;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.hero-overlay {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }

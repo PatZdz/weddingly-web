@@ -1,6 +1,5 @@
 import './globals.css'
 import { Metadata } from 'next';
-import Cookies from './components/Cookies';
 import Script from 'next/script'
 
 export const metadata: Metadata = {
@@ -17,7 +16,6 @@ export default function RootLayout({
     <html lang="pl">
       <body>
         {children}
-        <Cookies />
         <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       </body>
     </html>

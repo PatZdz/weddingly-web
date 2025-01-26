@@ -12,7 +12,7 @@ export default function Kontakt() {
           <div className="relative w-full aspect-[3/4] rounded-t-full overflow-hidden">
             <Image
               src="/images/kontakt.jpg"
-              alt="Para Młoda"
+              alt="Para Młoda kontakt"
               fill
               className="w-full h-full object-cover"
             />

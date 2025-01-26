@@ -17,7 +17,7 @@ export default function RSVP() {
     e.preventDefault();
     
     try {
-      const response = await fetch(
+      await fetch(
         'YOUR_GOOGLE_FORM_SUBMIT_URL',
         {
           method: 'POST',
@@ -40,11 +40,10 @@ export default function RSVP() {
       });
       
       alert('Dziękujemy za potwierdzenie!');
-    } catch (error) {
+    } catch (_error) {
       alert('Wystąpił błąd. Spróbuj ponownie później.');
     }
   };
-
   return (
     <section className="py-24 bg-[var(--background-color)]">
       <div className="container mx-auto px-12 md:px-24">

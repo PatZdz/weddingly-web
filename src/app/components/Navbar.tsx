@@ -17,18 +17,21 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
     const handleScroll = () => {
       const currentScrollY = window.pageYOffset;
       setShowNavbar(currentScrollY <= lastScrollY);
+      if (isDrawerOpen && currentScrollY !== lastScrollY) {
+        setIsDrawerOpen(false);
+      }
       lastScrollY = currentScrollY;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isDrawerOpen, setIsDrawerOpen]);
 
   const navItems = [
-    { href: "#info", text: "O nas" },
     { href: "#data-miejsce", text: "Data i miejsce" },
     { href: "#plan", text: "Plan" },
-    { href: "#muzyka", text: "Muzyka" },
+    { href: "#nocleg", text: "Nocleg" },
+    { href: "#kosmetyczki", text: "Kosmetyczki" },
     { href: "#kontakt", text: "Kontakt" },
   ];
 
@@ -50,37 +53,38 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
 
   return (
     <header
-      className={`fixed w-full py-6 backdrop-blur-md bg-[#F9F4ED]/95 border-b border-[#003E3C]/10 transition-transform duration-300 z-50 ${
+      className={`fixed w-full py-6 backdrop-blur-md bg-[var(--background-color)] border-b border-[#293238]/10 transition-transform duration-300 z-50 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <nav className="container mx-auto px-12 md:px-24 flex items-center justify-between">
-        <Link href="/" className="font-serif text-2xl text-[#003E3C] font-medium">
-          A & M
+        <Link href="/" className="font-serif text-2xl text-[#293238] font-medium">
+          M & B
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex gap-12 font-serif text-lg">
+        <ul className="hidden lg:flex gap-8 font-serif text-base">
           {navItems.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className="text-[#003E3C] hover:text-[#003E3C]/70 transition-colors font-medium"
+                className="text-[#293238] hover:text-[var(--primary-hover)] transition-colors font-medium"
               >
                 {item.text}
               </a>
             </li>
-          ))}
+          ))}        
         </ul>
 
         <div className="hidden lg:block">
-          <Link 
-            href="/rsvp" 
-            className="font-serif text-lg px-6 py-2 bg-[#003E3C] text-white rounded-full hover:bg-[#002E2C] transition-colors"
+          <a 
+            href="#rsvp" 
+            onClick={(e) => scrollToSection(e, '#rsvp')}
+            className="font-serif text-base px-6 py-2 btn-cta rounded-full"
           >
-            RSVP
-          </Link>
+            Potwierdź obecność
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -89,48 +93,45 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
           onClick={() => setIsDrawerOpen(!isDrawerOpen)}
         >
           {isDrawerOpen ? (
-            <XMarkIcon className="h-6 w-6 text-[#003E3C]" />
+            <XMarkIcon className="h-6 w-6 text-[#293238]" />
           ) : (
-            <Bars3Icon className="h-6 w-6 text-[#003E3C]" />
+            <Bars3Icon className="h-6 w-6 text-[#293238]" />
           )}
         </button>
       </nav>
 
       {/* Mobile Menu */}
       <div 
-        className={`fixed inset-0 bg-[#F9F4ED] backdrop-blur-md z-[60] transform transition-transform duration-300 ease-in-out lg:hidden ${
-          isDrawerOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 left-0 w-full h-screen bg-[var(--background-color)] backdrop-blur-md z-[60] transform transition-all duration-300 ease-in-out lg:hidden overflow-y-auto ${
+          isDrawerOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
         }`}
-        style={{ backgroundColor: 'rgba(249, 244, 237, 0.98)' }}
       >
-        <div className="flex flex-col h-full px-12 pt-24">
+        <div className="min-h-screen flex flex-col px-6 md:px-12 pt-24 pb-12">
           {/* Menu Items */}
           <nav className="flex-1">
-            <ul className="space-y-8">
+            <ul className="space-y-6 text-center">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
                     onClick={(e) => scrollToSection(e, item.href)}
-                    className="block text-2xl font-serif text-[#003E3C] hover:text-[#003E3C]/70 transition-colors"
+                    className="block text-xl font-serif text-[#293238] hover:text-[var(--primary-hover)] transition-colors"
                   >
                     {item.text}
                   </a>
                 </li>
               ))}
+              <li>
+                <a 
+                  href="#rsvp" 
+                  onClick={(e) => scrollToSection(e, '#rsvp')}
+                  className="block w-full text-[18px] font-serif px-6 py-3 btn-cta rounded-full text-center"
+                >
+                  Potwierdź obecność
+                </a>
+              </li>
             </ul>
           </nav>
-
-          {/* RSVP Button */}
-          <div className="py-12">
-            <Link 
-              href="/rsvp" 
-              className="block w-full text-center font-serif text-xl px-6 py-3 bg-[#003E3C] text-white rounded-full hover:bg-[#002E2C] transition-colors"
-              onClick={() => setIsDrawerOpen(false)}
-            >
-              RSVP
-            </Link>
-          </div>
         </div>
       </div>
     </header>

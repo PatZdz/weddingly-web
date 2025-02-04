@@ -3,16 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #003E3C;
-  --primary-hover: #002E2C;
-  --background-color: #F9F4ED;
+  --primary-color: #D94141;
+  --primary-hover: #AD2D2D;
+  --background-color: #F2E8DF;
+  --icon-color: #D94141;
+  --icon-black: #000000; 
 }
 
 @layer components {
   .btn-cta {
-    @apply bg-[#003E3C] hover:bg-[#002E2C] text-white font-medium px-4 py-2 rounded-lg transition-colors duration-200;
+    @apply bg-[var(--primary-color)] hover:bg-[var(--primary-hover)] text-white font-medium;
   }
 }
+
 
 @layer base {
   .bg-primary {

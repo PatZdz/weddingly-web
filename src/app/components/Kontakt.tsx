@@ -5,45 +5,62 @@ import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 
 export default function Kontakt() {
   return (
-    <section className="py-16 bg-[var(--background-color)]">
-      <div className="container mx-auto px-12 md:px-24 flex flex-col md:flex-row items-center">
-        {/* Left column - image with arch shape */}
-        <div className="w-full md:w-1/2 mb-8 md:mb-0 md:mr-16">
+    <section id="kontakt" className="py-24 bg-[var(--background-color)]">
+      <div className="container mx-auto px-12 md:px-24">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-serif mb-6">Kontakt</h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Jeśli macie jakiekolwiek pytania, jesteśmy do Waszej dyspozycji
+          </p>
+        </div>
+
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Image Section */}
           <div className="relative w-full aspect-[3/4] rounded-t-full overflow-hidden">
             <Image
-              src="/images/kontakt.jpg"
+              src="/images/mb_3.jpg"
               alt="Para Młoda kontakt"
               fill
               className="w-full h-full object-cover"
             />
           </div>
-        </div>
-        {/* Right column - contact info */}
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          <h2 className="text-4xl md:text-5xl font-serif mb-12">Kontakt</h2>
-          
-          <div className="space-y-8">
-            <div className="flex items-center gap-4">
-              <PhoneIcon className="h-8 w-8 text-[#003E3C]" />
-              <div>
-                <p className="text-xl font-serif mb-1">Andrzej</p>
-                <p className="text-2xl text-[#003E3C]">+48 123 456 789</p>
-              </div>
-            </div>
 
-            <div className="flex items-center gap-4">
-              <PhoneIcon className="h-8 w-8 text-[#003E3C]" />
-              <div>
-                <p className="text-xl font-serif mb-1">Marzena</p>
-                <p className="text-2xl text-[#003E3C]">+48 987 654 321</p>
+          {/* Contact Information */}
+          <div className="flex flex-col justify-center">
+            <div className="grid grid-cols-1 gap-8">
+              {/* Contact Card - Andrzej */}
+              <div className="border border-[#003E3C]/20 p-8 rounded-xl">
+                <div className="flex items-center space-x-6">
+                  <PhoneIcon className="h-8 w-8 text-black flex-shrink-0" />
+                  <div>
+                    <h3 className="text-2xl font-serif mb-2">Marianna</h3>
+                    <p className="text-lg text-black">+48 123 456 789</p>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <div className="flex items-center gap-4">
-              <EnvelopeIcon className="h-8 w-8 text-[#003E3C]" />
-              <div>
-                <p className="text-xl font-serif mb-1">Email</p>
-                <p className="text-2xl text-[#003E3C]">slub@andrzejimarzena.pl</p>
+              {/* Contact Card - Marzena */}
+              <div className="border border-[#003E3C]/20 p-8 rounded-xl">
+                <div className="flex items-center space-x-6">
+                  <PhoneIcon className="h-8 w-8 text-black flex-shrink-0" />
+                  <div>
+                    <h3 className="text-2xl font-serif mb-2">Bartosz</h3>
+                    <p className="text-lg text-black">+48 987 654 321</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact Card - Email */}
+              <div className="border border-[#003E3C]/20 p-8 rounded-xl">
+                <div className="flex items-center space-x-6">
+                  <EnvelopeIcon className="h-8 w-8 text-black flex-shrink-0" />
+                  <div>
+                    <h3 className="text-2xl font-serif mb-2">Email</h3>
+                    <p className="text-lg text-black">slub@andrzejimarzena.pl</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -51,4 +68,5 @@ export default function Kontakt() {
       </div>
     </section>
   );
+
 }

@@ -1,15 +1,13 @@
 "use client";
 import React from "react";
-import { ClockIcon } from "@heroicons/react/24/outline";
 
 export default function Plan() {
   return (
-    <section className="py-24 bg-[var(--background-color)]">
+    <section id="plan" className="py-24 bg-[var(--background-color)]">
       <div className="container mx-auto px-12 md:px-24">
         <div className="text-center mb-16">
-          <ClockIcon className="h-16 w-16 text-[#003E3C] mx-auto mb-6" />
           <h2 className="text-4xl md:text-5xl font-serif mb-6">Plan uroczystości</h2>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
             Harmonogram naszego wyjątkowego dnia
           </p>
         </div>
@@ -18,7 +16,7 @@ export default function Plan() {
           <div className="space-y-8">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-8 bg-white/50 backdrop-blur-sm rounded-2xl border border-[#003E3C]/10">
               <div className="text-center md:text-left">
-                <span className="text-4xl font-serif text-[#003E3C] block mb-2">12:00</span>
+                <span className="text-4xl font-serif text-[var(--icon-color)] block mb-2">12:00</span>
                 <span className="text-lg text-gray-500 font-light">Ceremonia</span>
               </div>
               <div className="flex-1">
@@ -32,13 +30,13 @@ export default function Plan() {
 
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-8 bg-white/50 backdrop-blur-sm rounded-2xl border border-[#003E3C]/10">
               <div className="text-center md:text-left">
-                <span className="text-4xl font-serif text-[#003E3C] block mb-2">14:00</span>
+                <span className="text-4xl font-serif text-[var(--icon-color)] block mb-2">14:00</span>
                 <span className="text-lg text-gray-500 font-light">Przyjęcie</span>
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl font-serif mb-4 text-center md:text-left">Przyjęcie weselne</h3>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Sala Weselna &quot;Pod Różami&quot;<br />
+                  Sala Weselna "Pod Różami"<br />
                   ul. Kwiatowa 15, Warszawa
                 </p>
               </div>
@@ -46,7 +44,7 @@ export default function Plan() {
 
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-8 bg-white/50 backdrop-blur-sm rounded-2xl border border-[#003E3C]/10">
               <div className="text-center md:text-left">
-                <span className="text-4xl font-serif text-[#003E3C] block mb-2">19:00</span>
+                <span className="text-4xl font-serif text-[var(--icon-color)] block mb-2">19:00</span>
                 <span className="text-lg text-gray-500 font-light">Zabawa</span>
               </div>
               <div className="flex-1">

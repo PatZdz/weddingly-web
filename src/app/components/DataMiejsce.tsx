@@ -4,31 +4,39 @@ import { CalendarDaysIcon, MapPinIcon, ClockIcon } from "@heroicons/react/24/out
 
 export default function DataMiejsce() {
   return (
-    <section className="py-24 bg-[var(--background-color)]">
+    <section id="data-miejsce" className="py-24 bg-[var(--background-color)]">
       <div className="container mx-auto px-12 md:px-24">
         {/* Section Title */}
-        <h2 className="text-4xl md:text-5xl font-serif text-center mb-16">Data i miejsce</h2>
+        <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">Data i miejsce</h2>
 
         {/* Details Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <div className="flex flex-col items-center text-center">
-            <CalendarDaysIcon className="h-12 w-12 text-[#003E3C] mb-4" />
+            <CalendarDaysIcon className="h-12 w-12 text-black mb-3" />
             <h3 className="text-2xl font-serif mb-2">Data</h3>
-            <p className="text-xl text-gray-600">12 grudnia 2025</p>
+            <p className="text-lg text-gray-600">12 grudnia 2025</p>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <ClockIcon className="h-12 w-12 text-[#003E3C] mb-4" />
+            <ClockIcon className="h-12 w-12 text-black mb-3" />
             <h3 className="text-2xl font-serif mb-2">Godzina</h3>
-            <p className="text-xl text-gray-600">12:00</p>
+            <p className="text-lg text-gray-600">12:00</p>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <MapPinIcon className="h-12 w-12 text-[#003E3C] mb-4" />
-            <h3 className="text-2xl font-serif mb-2">Miejsce</h3>
-            <p className="text-xl text-gray-600">Kościół św. Dominika</p>
-            <p className="text-xl text-gray-600">ul. Dominikańska 2</p>
-            <p className="text-xl text-gray-600">Warszawa</p>
+            <MapPinIcon className="h-12 w-12 text-black mb-3" />
+            <h3 className="text-2xl font-serif mb-2">Ślub</h3>
+            <p className="text-lg text-gray-600">Kościół św. Dominika</p>
+            <p className="text-lg text-gray-600">ul. Dominikańska 2</p>
+            <p className="text-lg text-gray-600">Warszawa</p>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <MapPinIcon className="h-12 w-12 text-black mb-3" />
+            <h3 className="text-2xl font-serif mb-2">Wesele</h3>
+            <p className="text-lg text-gray-600">Hotel Victoria</p>
+            <p className="text-lg text-gray-600">ul. Królewska 11</p>
+            <p className="text-lg text-gray-600">Warszawa</p>
           </div>
         </div>
 

@@ -5,55 +5,61 @@ import { CalendarDaysIcon, MapPinIcon, ClockIcon } from "@heroicons/react/24/out
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[140vh] flex items-end justify-center pb-16">
+    <section className="relative w-full h-screen flex items-end justify-center pb-12">
       {/* Background Image */}
-      <div className="absolute inset-0 max-w-[1920px] mx-auto">
+      <div className="absolute inset-0 w-full h-full">
         <Image
-          src="/images/hero.jpg"
+          src="/images/mb_hero.jpg"
           alt="Wedding background"
           fill
-          sizes="(max-width: 1920px) 100vw, 1920px"
+          sizes="100vw"
           quality={100}
           priority
           className="object-cover brightness-75"
         />
       </div>
-      
+
       {/* Content Container */}
       <div className="container relative z-10 mx-auto text-center text-white mt-auto">
         <h1 className="text-6xl md:text-7xl font-serif mb-8 tracking-wide drop-shadow-lg">
-          Andrzej & Marzena
+          Marianna & Bartosz
         </h1>
-        
-        <p className="text-xl md:text-2xl font-light mb-16 max-w-2xl mx-auto drop-shadow-md">
-          Z radością zapraszamy Was na uroczystość zaślubin,
-          która odbędzie się w gronie najbliższych nam osób.
-          Będzie nam niezmiernie miło gościć Was w tym wyjątkowym dla nas dniu.
-        </p>
 
         {/* Wedding Details Grid */}
-        <div className="grid grid-cols-3 md:grid-cols-3 gap-2 md:gap-8 max-w-4xl mx-auto bg-white/20 backdrop-blur-md rounded-2xl p-4 md:p-8 shadow-xl">
-          <div className="flex flex-col items-center space-y-2 md:space-y-4 p-2 md:p-4">
-            <CalendarDaysIcon className="h-8 w-8 md:h-12 md:w-12 text-white" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-5xl mx-auto bg-white/20 backdrop-blur-md rounded-xl p-6 md:p-8 shadow-xl">
+          <div className="flex flex-col items-center space-y-2 md:space-y-3 p-2 md:p-3">
+            <CalendarDaysIcon className="h-8 w-8 md:h-10 md:w-10 text-white" />
             <div>
-              <h3 className="text-base md:text-xl font-semibold mb-1 md:mb-2 text-white">Data</h3>
-              <p className="text-sm md:text-lg text-white">12.12.2025</p>
+              <h3 className="text-base md:text-xl font-semibold mb-2 text-white">Data</h3>
+              <p className="text-sm md:text-lg text-white">12 grudnia 2025</p>
             </div>
           </div>
 
-          <div className="flex flex-col items-center space-y-2 md:space-y-4 p-2 md:p-4">
-            <MapPinIcon className="h-8 w-8 md:h-12 md:w-12 text-white" />
+          <div className="flex flex-col items-center space-y-2 md:space-y-3 p-2 md:p-3">
+            <ClockIcon className="h-8 w-8 md:h-10 md:w-10 text-white" />
             <div>
-              <h3 className="text-base md:text-xl font-semibold mb-1 md:mb-2 text-white">Miejsce</h3>
-              <p className="text-sm md:text-lg text-white">ul. Wrzesińska</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center space-y-2 md:space-y-4 p-2 md:p-4">
-            <ClockIcon className="h-8 w-8 md:h-12 md:w-12 text-white" />
-            <div>
-              <h3 className="text-base md:text-xl font-semibold mb-1 md:mb-2 text-white">Godzina</h3>
+              <h3 className="text-base md:text-xl font-semibold mb-2 text-white">Godzina</h3>
               <p className="text-sm md:text-lg text-white">12:00</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center space-y-2 md:space-y-3 p-2 md:p-3">
+            <MapPinIcon className="h-8 w-8 md:h-10 md:w-10 text-white" />
+            <div>
+              <h3 className="text-base md:text-xl font-semibold mb-2 text-white">Miejsce ślubu</h3>
+              <p className="text-sm md:text-lg text-white">Kościół św. Dominika</p>
+              <p className="text-sm md:text-lg text-white">ul. Dominikańska 2</p>
+              <p className="text-sm md:text-lg text-white">Warszawa</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center space-y-2 md:space-y-3 p-2 md:p-3">
+            <MapPinIcon className="h-8 w-8 md:h-10 md:w-10 text-white" />
+            <div>
+              <h3 className="text-base md:text-xl font-semibold mb-2 text-white">Miejsce wesela</h3>
+              <p className="text-sm md:text-lg text-white">Folwark Łochów</p>
+              <p className="text-sm md:text-lg text-white">ul. Marii Konopnickiej 1</p>
+              <p className="text-sm md:text-lg text-white">Łochów</p>
             </div>
           </div>
         </div>

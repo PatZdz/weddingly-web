@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Strona Ślubna',
+  title: 'Weddingly - Marianna i Bartosz',
   description: 'Strona ślubna Andrzeja i Marzeny',
 };
 

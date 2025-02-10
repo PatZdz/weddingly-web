@@ -58,7 +58,7 @@ export default function Kontakt() {
                   <EnvelopeIcon className="h-8 w-8 text-black flex-shrink-0" />
                   <div>
                     <h3 className="text-2xl font-serif mb-2">Email</h3>
-                    <p className="text-lg text-black">slub@andrzejimarzena.pl</p>
+                    <p className="text-lg text-black">slub@weddingly.pl</p>
                   </div>
                 </div>
               </div>

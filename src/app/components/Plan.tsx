@@ -4,54 +4,63 @@ import React from "react";
 export default function Plan() {
   return (
     <section id="plan" className="py-24 bg-[var(--background-color)]">
-      <div className="container mx-auto px-12 md:px-24">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif mb-6">Plan uroczystości</h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-            Harmonogram naszego wyjątkowego dnia
-          </p>
-        </div>
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="max-w-3xl mx-auto bg-white rounded-lg p-8 md:p-12" 
+          style={{
+            backgroundImage: `radial-gradient(#00000005 1px, transparent 1px)`,
+            backgroundSize: '24px 24px'
+          }}>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-serif mb-4 text-[var(--text-black)]">Plan uroczystości</h2>
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font-light italic">
+              Harmonogram naszego wyjątkowego dnia
+            </p>
+          </div>
 
-        <div className="max-w-4xl mx-auto">
           <div className="space-y-8">
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-8 bg-white/50 backdrop-blur-sm rounded-2xl border border-[#003E3C]/10">
-              <div className="text-center md:text-left">
-                <span className="text-4xl font-serif text-[var(--icon-color)] block mb-2">12:00</span>
-                <span className="text-lg text-gray-500 font-light">Ceremonia</span>
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-serif mb-4 text-center md:text-left">Ceremonia zaślubin</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  Kościół św. Dominika<br />
-                  ul. Dominikańska 2, Warszawa
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-8 bg-white/50 backdrop-blur-sm rounded-2xl border border-[#003E3C]/10">
-              <div className="text-center md:text-left">
-                <span className="text-4xl font-serif text-[var(--icon-color)] block mb-2">14:00</span>
-                <span className="text-lg text-gray-500 font-light">Przyjęcie</span>
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-serif mb-4 text-center md:text-left">Przyjęcie weselne</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  Sala Weselna "Pod Różami"<br />
-                  ul. Kwiatowa 15, Warszawa
-                </p>
+            {/* Event 1 */}
+            <div className="p-4 md:p-6 hover:bg-gray-50 rounded-lg transition-colors">
+              <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                <span className="text-2xl md:text-3xl font-serif text-[var(--icon-color)] md:min-w-[100px]">13:30</span>
+                <div>
+                  <h3 className="text-xl md:text-2xl font-serif mb-1 md:mb-2 text-[var(--icon-color)]">
+                    Powitanie gości
+                  </h3>
+                  <p className="text-gray-600 text-base md:text-lg">
+                    Kościół św. Dominika<br />
+                    Powitanie i zajmowanie miejsc
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-8 bg-white/50 backdrop-blur-sm rounded-2xl border border-[#003E3C]/10">
-              <div className="text-center md:text-left">
-                <span className="text-4xl font-serif text-[var(--icon-color)] block mb-2">19:00</span>
-                <span className="text-lg text-gray-500 font-light">Zabawa</span>
+            {/* Event 2 - apply the same changes */}
+            <div className="p-4 md:p-6 hover:bg-gray-50 rounded-lg transition-colors">
+              <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                <span className="text-2xl md:text-3xl font-serif text-[var(--icon-color)] md:min-w-[100px]">14:00</span>
+                <div>
+                  <h3 className="text-2xl font-serif mb-2 text-[var(--icon-color)]">
+                    Ceremonia zaślubin
+                  </h3>
+                  <p className="text-gray-600 text-lg">
+                    Msza święta i złożenie przysięgi małżeńskiej
+                  </p>
+                </div>
               </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-serif mb-4 text-center md:text-left">Zabawa do białego rana</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  Czas na wspólną zabawę przy muzyce i świętowanie do samego rana!
-                </p>
+            </div>
+
+            {/* Event 3 - apply the same changes */}
+            <div className="p-4 md:p-6 hover:bg-gray-50 rounded-lg transition-colors">
+              <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                <span className="text-2xl md:text-3xl font-serif text-[var(--icon-color)] md:min-w-[100px]">16:00</span>
+                <div>
+                  <h3 className="text-2xl font-serif mb-2 text-[var(--icon-color)]">
+                    Przyjęcie weselne
+                  </h3>
+                  <p className="text-gray-600 text-lg">
+                    Powitanie Młodej Pary, toast i obiad weselny
+                  </p>
+                </div>
               </div>
             </div>
           </div>

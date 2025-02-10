@@ -17,7 +17,7 @@ export default function Muzyka() {
         <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden">
           <iframe 
             style={{ borderRadius: "12px" }} 
-            src="https://open.spotify.com/embed/artist/0FJ0Zm6JprViuazYPk4keW?utm_source=generator&theme=0" 
+            src="https://open.spotify.com/embed/playlist/4LzpJS4XXmpEGeDLAzUkW5?utm_source=generator&theme=0" 
             width="100%" 
             height="352" 
             frameBorder="0" 

@@ -8,6 +8,7 @@
   --background-color: #F2E8DF;
   --icon-color: #D94141;
   --icon-black: #000000; 
+  --text-black: #293238;
 }
 
 @layer components {

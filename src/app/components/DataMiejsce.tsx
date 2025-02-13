@@ -20,7 +20,7 @@ export default function DataMiejsce() {
           <div className="flex flex-col items-center text-center">
             <ClockIcon className="h-10 w-10 text-black mb-2" />
             <h3 className="text-xl font-serif mb-1">Godzina</h3>
-            <p className="text-base text-gray-600">12:00</p>
+            <p className="text-base text-gray-600">14:00</p>
           </div>
         </div>
 

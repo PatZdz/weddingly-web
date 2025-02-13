@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface NavbarProps {
   isDrawerOpen: boolean;
@@ -31,7 +32,6 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
     { href: "#data-miejsce", text: "Data i miejsce" },
     { href: "#plan", text: "Plan" },
     { href: "#nocleg", text: "Nocleg" },
-    { href: "#kosmetyczki", text: "Kosmetyczki" },
     { href: "#kontakt", text: "Kontakt" },
   ];
 
@@ -55,11 +55,31 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
     <header
       className={`fixed w-full py-6 backdrop-blur-md bg-[var(--background-color)] border-b border-[#293238]/10 transition-transform duration-300 z-50 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
-      }`}
+      } ${isDrawerOpen ? "overflow-hidden" : ""}`}
     >
       <nav className="container mx-auto px-12 md:px-24 flex items-center justify-between">
-        <Link href="/" className="font-serif text-2xl text-[#293238] font-medium">
-          M & B
+        {/* Logo Weddingly z linkiem (lewa strona) */}
+        <Link 
+          href="https://www.weddingly.pl" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center space-x-4"
+        >
+          <Image
+            src="/images/weddingly_logo.svg" // Ścieżka do logo Weddingly
+            alt="Weddingly Logo"
+            width={120} // Szerokość logo
+            height={32} // Wysokość logo
+            priority
+          />
+        </Link>
+
+        {/* Logo i tekst "M & B" */}
+        <Link href="/" className="flex items-center space-x-4">
+          {/* Tekst "M & B" */}
+          <span className="font-serif text-2xl text-[#293238] font-medium">
+            M & B
+          </span>
         </Link>
 
         {/* Desktop Menu */}
@@ -78,19 +98,20 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
         </ul>
 
         <div className="hidden lg:block">
-          <a 
+          <Link 
             href="#rsvp" 
             onClick={(e) => scrollToSection(e, '#rsvp')}
             className="font-serif text-base px-6 py-2 btn-cta rounded-full"
           >
             Potwierdź obecność
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button
           className="lg:hidden z-[70]"
           onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+          aria-label={isDrawerOpen ? "Zamknij menu" : "Otwórz menu"}
         >
           {isDrawerOpen ? (
             <XMarkIcon className="h-6 w-6 text-[#293238]" />
@@ -122,13 +143,13 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
                 </li>
               ))}
               <li>
-                <a 
+                <Link 
                   href="#rsvp" 
                   onClick={(e) => scrollToSection(e, '#rsvp')}
                   className="block w-full text-[18px] font-serif px-6 py-3 btn-cta rounded-full text-center"
                 >
                   Potwierdź obecność
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>

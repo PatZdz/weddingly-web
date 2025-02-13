@@ -1,58 +1,46 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import { HeartIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="bg-[#F2E8DF] text-black py-16">
       <div className="container mx-auto px-12 md:px-24">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Navigation Links */}
-          <div className="text-center md:text-left">
-            <h3 className="font-serif text-2xl mb-6">Nawigacja</h3>
-            <ul className="space-y-3">
-              <li><Link href="#data-miejsce" className="hover:opacity-80 transition-opacity">Data i miejsce</Link></li>
-              <li><Link href="#plan" className="hover:opacity-80 transition-opacity">Plan</Link></li>
-              <li><Link href="#nocleg" className="hover:opacity-80 transition-opacity">Nocleg</Link></li>
-              <li><Link href="#kosmetyczki" className="hover:opacity-80 transition-opacity">Kosmetyczki</Link></li>
-              <li><Link href="#kontakt" className="hover:opacity-80 transition-opacity">Kontakt</Link></li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div className="text-center">
-            <h3 className="font-serif text-2xl mb-6">Kontakt</h3>
-            <div className="space-y-3">
-              <p>Marianna: +48 123 456 789</p>
-              <p>Bartosz: +48 987 654 321</p>
-              <p>slub@gmail.com</p>
-            </div>
-          </div>
-
-          {/* Location */}
-          <div className="text-center md:text-right">
-            <h3 className="font-serif text-2xl mb-6">Lokalizacja</h3>
-            <div className="space-y-3">
-              <p>Kościół św. Dominika</p>
-              <p>ul. Dominikańska 2</p>
-              <p>Warszawa</p>
-              <p className="mt-4">Hotel Victoria</p>
-              <p>ul. Królewska 11</p>
-              <p>Warszawa</p>
-            </div>
-          </div>
-        </div>
-
         {/* Footer Bottom */}
-        <div className="pt-8 border-t border-white/20 text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <HeartIcon className="h-5 w-5" />
-            <p className="font-serif text-xl">Marianna & Bartosz</p>
-            <HeartIcon className="h-5 w-5" />
+        <div className="pt-8 border-t border-white/20">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            {/* Logo Weddingly z linkiem (lewa strona) */}
+            <div className="mb-4 md:mb-0">
+              <Link href="https://www.weddingly.pl" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/images/weddingly_logo.svg" // Ścieżka do logo
+                  alt="Weddingly Logo"
+                  width={120}
+                  height={32}
+                />
+              </Link>
+            </div>
+
+            {/* Marianna & Bartosz z datą (środek) */}
+            <div className="text-center mb-4 md:mb-0">
+              <div className="flex items-center justify-center gap-2">
+              <p className="font-serif text-xl">Marianna & Bartosz</p>
+              </div>
+              {/* Data */}
+              <p className="text-sm opacity-80 mt-2">12.12.2025</p>
+            </div>
+
+            {/* Contact Info (prawa strona) */}
+            <div className="text-center md:text-right">
+              <div className="space-y-1">
+                <p>Marianna: +48 123 456 789</p>
+                <p>Bartosz: +48 987 654 321</p>
+                <p>slub@gmail.com</p>
+              </div>
+            </div>
           </div>
-          <p className="text-sm opacity-80">12.12.2025</p>
         </div>
       </div>
     </footer>

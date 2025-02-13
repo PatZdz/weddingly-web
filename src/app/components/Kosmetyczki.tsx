@@ -8,14 +8,16 @@ export default function Kosmetyczki() {
       specialty: "Makijaż",
       instagram: "dominikaszymczyk.mua",
       url: "https://www.instagram.com/dominikaszymczyk.mua/",
-      emoji: "💄"
+      emoji: "💄", // Standardowe emoji
+      emojiStyle: { filter: "grayscale(95%)" } // Dodaj styl CSS
     },
     {
       name: "Hair Mess",
       specialty: "Fryzury",
       instagram: "hair_mess_in_poznan",
       url: "https://www.instagram.com/hair_mess_in_poznan/",
-      emoji: "💇‍♀️"
+      emoji: "💇‍♀️",
+      emojiStyle: { filter: "grayscale(95%)" } // Dodaj styl CSS
     }
   ];
 
@@ -37,7 +39,7 @@ export default function Kosmetyczki() {
                 key={index}
                 className="flex flex-col items-center p-8 bg-white/50 backdrop-blur-sm rounded-2xl border border-[#003E3C]/10"
               >
-                <span className="text-5xl mb-6">{rec.emoji}</span>
+                <span style={rec.emojiStyle} className="text-5xl mb-6">{rec.emoji}</span>
                 <h3 className="text-2xl font-serif mb-2">{rec.name}</h3>
                 <p className="text-lg text-gray-500 mb-4">{rec.specialty}</p>
                 <a

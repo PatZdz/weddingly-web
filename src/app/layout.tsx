@@ -4,7 +4,7 @@ import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Weddingly - Marianna i Bartosz',
-  description: 'Strona ślubna Andrzeja i Marzeny',
+  description: 'Strona ślubna Marianny i Bartosza',
 };
 
 export default function RootLayout({

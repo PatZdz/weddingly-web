@@ -10,7 +10,6 @@ import Muzyka from "./components/Muzyka";
 import Plan from "./components/Plan";
 import Kontakt from "./components/Kontakt";
 import NaszaHistoria from "./components/NaszaHistoria";
-import Prezenty from "./components/Prezenty";
 import Kosmetyczki from "./components/Kosmetyczki";
 import Nocleg from "./components/Nocleg";
 import FAQ from "./components/FAQ";
@@ -27,7 +26,6 @@ export default function Page() {
       <DataMiejsce />
       <Plan />
       <Muzyka />
-      <Prezenty />
       <Kosmetyczki />
       <Nocleg />
       <RSVP />

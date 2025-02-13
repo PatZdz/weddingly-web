@@ -44,7 +44,7 @@ export default function DrodzyGoscie() {
         </div>
         {/* Right column - text and countdown */}
         <div className="w-full md:w-1/2 text-left">
-          <h2 className="text-4xl md:text-5xl font-serif mb-6 text-center md:text-left">Drodzy goście</h2>
+          <h2 className="text-4xl md:text-5xl font-serif mb-6 text-center md:text-left">Drodzy Goście</h2>
           <p className="text-[18px] text-gray-600 mb-12 leading-relaxed">
             Z radością zapraszamy Was na nasz ślub w 2025 roku!
             Będzie nam niezmiernie miło, jeśli uświetnicie ten wyjątkowy dzień swoją obecnością.

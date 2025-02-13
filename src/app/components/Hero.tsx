@@ -21,9 +21,10 @@ export default function Hero() {
 
       {/* Content Container */}
       <div className="container relative z-10 mx-auto text-center text-white mt-auto">
-        <h1 className="text-6xl md:text-7xl font-serif mb-8 tracking-wide drop-shadow-lg">
+        <h1 className="text-6xl md:text-7xl font-serif mb-4 tracking-wide drop-shadow-lg">
           Marianna & Bartosz
         </h1>
+        <h2 className="text-2xl md:text-3xl font-normal mb-8 drop-shadow-lg">POBIERAMY SIĘ!</h2>
 
         {/* Wedding Details Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 max-w-4xl mx-auto bg-white/20 backdrop-blur-md rounded-lg p-5 md:p-7 shadow-lg">

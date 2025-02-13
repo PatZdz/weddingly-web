@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface NavbarProps {
   isDrawerOpen: boolean;
@@ -31,7 +32,6 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
     { href: "#data-miejsce", text: "Data i miejsce" },
     { href: "#plan", text: "Plan" },
     { href: "#nocleg", text: "Nocleg" },
-    { href: "#kosmetyczki", text: "Kosmetyczki" },
     { href: "#kontakt", text: "Kontakt" },
   ];
 
@@ -58,7 +58,13 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
       }`}
     >
       <nav className="container mx-auto px-12 md:px-24 flex items-center justify-between">
-        <Link href="/" className="font-serif text-2xl text-[#293238] font-medium">
+        <Link href="/" className="font-serif text-2xl text-[#293238] font-medium flex items-center gap-2">
+          <Image
+            src="/vectors/weddingly_symbol.svg"
+            alt="Weddingly Logo"
+            width={32}
+            height={32}
+          />
           M & B
         </Link>
 

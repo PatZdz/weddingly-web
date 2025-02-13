@@ -5,7 +5,7 @@ import { CalendarDaysIcon, MapPinIcon, ClockIcon } from "@heroicons/react/24/out
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen flex items-end justify-center pb-12">
+    <section className="relative w-full h-screen flex items-end justify-center pb-12 animate-fadeIn">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <Image
@@ -15,13 +15,18 @@ export default function Hero() {
           sizes="100vw"
           quality={100}
           priority
-          className="object-cover brightness-75"
+          className="object-cover brightness-[0.85] transition-all duration-700"
         />
       </div>
 
       {/* Content Container */}
       <div className="container relative z-10 mx-auto text-center text-white mt-auto">
-        <h1 className="text-6xl md:text-7xl font-serif mb-8 tracking-wide drop-shadow-lg">
+        <div className="relative inline-block">
+          <p className="text-4xl md:text-5xl font-serif mb-6 tracking-wide drop-shadow-lg animate-slideDown">
+            Pobieramy się!
+          </p>
+        </div>
+        <h1 className="text-6xl md:text-8xl font-serif mb-10 tracking-wide drop-shadow-lg animate-slideUp">
           Marianna & Bartosz
         </h1>
 

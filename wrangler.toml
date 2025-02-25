@@ -1,0 +1,8 @@
+name = "weddingweb"
+compatibility_date = "2024-02-25"
+
+[build]
+command = "npm run build"
+
+[site]
+bucket = "./out"
